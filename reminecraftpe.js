@@ -149,8 +149,10 @@ Module.expectedDataFileDownloads++;
     if (!check) throw msg + (new Error).stack;
    }
    Module["FS_createPath"]("/", "assets", true, true);
+   Module["FS_createPath"]("/assets", "font", true, true);
    Module["FS_createPath"]("/assets", "gui", true, true);
-   Module["FS_createPath"]("/assets", "patches", true, true);
+   Module["FS_createPath"]("/assets", "item", true, true);
+   Module["FS_createPath"]("/assets", "mob", true, true);
    /** @constructor */ function DataRequest(start, end, audio) {
     this.start = start;
     this.end = end;
@@ -215,23 +217,55 @@ Module.expectedDataFileDownloads++;
  };
  loadPackage({
   "files": [ {
-   "filename": "/assets/gui/raknet.png",
+   "filename": "/assets/font/default.png",
    "start": 0,
-   "end": 18372
+   "end": 3716
   }, {
-   "filename": "/assets/icon.png",
-   "start": 18372,
-   "end": 23464
+   "filename": "/assets/gui/background.png",
+   "start": 3716,
+   "end": 4727
   }, {
-   "filename": "/assets/patches/patch_data.txt",
-   "start": 23464,
-   "end": 25447
+   "filename": "/assets/gui/default_world.png",
+   "start": 4727,
+   "end": 29792
   }, {
-   "filename": "/assets/readme.txt",
-   "start": 25447,
-   "end": 25557
+   "filename": "/assets/gui/gui.png",
+   "start": 29792,
+   "end": 44002
+  }, {
+   "filename": "/assets/gui/gui_blocks.png",
+   "start": 44002,
+   "end": 150245
+  }, {
+   "filename": "/assets/gui/icons.png",
+   "start": 150245,
+   "end": 152668
+  }, {
+   "filename": "/assets/gui/items.png",
+   "start": 152668,
+   "end": 168391
+  }, {
+   "filename": "/assets/gui/title.png",
+   "start": 168391,
+   "end": 174196
+  }, {
+   "filename": "/assets/item/camera.png",
+   "start": 174196,
+   "end": 174878
+  }, {
+   "filename": "/assets/mob/char.png",
+   "start": 174878,
+   "end": 176238
+  }, {
+   "filename": "/assets/particles.png",
+   "start": 176238,
+   "end": 177082
+  }, {
+   "filename": "/assets/terrain.png",
+   "start": 177082,
+   "end": 224841
   } ],
-  "remote_package_size": 25557
+  "remote_package_size": 224841
  });
 })();
 
